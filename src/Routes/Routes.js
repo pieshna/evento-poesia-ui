@@ -21,8 +21,12 @@ const Routes = [
     },
     {
         path: "/",
-        element:<Inscripcion/>,
+        element:<Inscripcion />,
         exact: true
+    },
+    {
+        path:"*",
+        element:<Inscripcion />
     }
 
 ]

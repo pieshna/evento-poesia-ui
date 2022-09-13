@@ -71,6 +71,8 @@ const Mostrar = ({ estudiante }) => {
         </div>
       </div>
       <p className="text-center m-2">Carrera: {estudiante.carrera}</p>
+      <div>
+        <h1 className="text-center font-semibold">Poesias Inscritas</h1>
       <table className="table-auto m-auto">
         <thead>
           <tr>
@@ -83,6 +85,7 @@ const Mostrar = ({ estudiante }) => {
           <Hijo data={estudiante.carnet} />
         </tbody>
       </table>
+      </div>
     </>
   );
 };
@@ -103,8 +106,8 @@ const Hijo = ({ data }) => {
       {genero.map((genero, index) => (
         <tr key={index}>
           <td className="border border-white p-2">{genero.generoPoesia}</td>
-          <td className="border border-white p-2">{mostrarFecha(genero.fechaAParticipar)}</td>
           <td className="border border-white p-2">{mostrarFecha(genero.fechaInscripcion)}</td>
+          <td className="border border-white p-2">{mostrarFecha(genero.fechaAParticipar)}</td>
         </tr>
       ))}
     </>
