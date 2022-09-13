@@ -1,10 +1,11 @@
 import Inscripcion from '../inscripcion/Inscripcion';
 import Nueva from '../inscripcion/Nueva';
 import List from '../inscripcion/List';
+import Home from '../Home';
 
 const Routes = [
     {
-        path: "/",
+        path: "/estudiante",
         exact: true,
         element: <Inscripcion />
     },
@@ -16,6 +17,11 @@ const Routes = [
     {
         path: "/inscripcion/list",
         element: <List />,
+        exact: true
+    },
+    {
+        path: "/",
+        element:<Inscripcion/>,
         exact: true
     }
 
